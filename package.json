@@ -1,0 +1,26 @@
+{
+  "name": "nodejs-course",
+  "version": "1.0.0",
+  "description": "Node JS course assignment solutions.  \r Each solution is stored on a separate branch.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LiviuLvu/course-assignments-progress-nodejs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LiviuLvu/course-assignments-progress-nodejs/issues"
+  },
+  "homepage": "https://github.com/LiviuLvu/course-assignments-progress-nodejs#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
