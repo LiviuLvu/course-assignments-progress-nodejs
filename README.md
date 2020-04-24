@@ -1,4 +1,4 @@
 # Learning NodeJS
 
 Node JS course assignment solutions.  
-Each solution is stored on a separate branch.  
+Each solution is added on a separate PR in related branch. 
