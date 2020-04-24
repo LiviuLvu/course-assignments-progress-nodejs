@@ -1,18 +1,17 @@
 const express = require('express');
+const bodyParser = require('body-parser');
+const path = require('path');
 
 const app = express();
+const rootDirPath = require('./util/root-module-path');
 
-app.use('/users', (req, res, next) => {
-  console.log('middleware 2');
-  res.send('<h1>Users route</h1>');
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(express.static(path.join(rootDirPath, 'public')));
+app.get('/users', (req, res, next) => {
+  res.sendFile(path.join(rootDirPath, 'views', 'users.html'));
 });
-app.use((req, res, next) => {
-  console.log('middleware 1');
-  next();
-});
-app.use('/', (req, res, next) => {
-  console.log('done');
-  res.send('<h1>App route "/"</h1>');
+app.get('/', (req, res, next) => {
+  res.sendFile(path.join(rootDirPath, 'views', 'home.html'));
 });
 
 app.listen(3000);
