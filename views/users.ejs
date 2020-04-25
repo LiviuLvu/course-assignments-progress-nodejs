@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('includes/head.ejs') %>
+  <body>
+    <h1>Users Page</h1>
+    <% if (users.length > 0) { %>
+      <ul>
+      <% for (let user of users ) { %>
+          <li><%= user %></li>
+        <% } %>
+      </ul>
+    <% } else { %>
+      <p>User list is empty</p>
+    <% } %>
+  </body>
+</html>
